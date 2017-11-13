@@ -1,0 +1,84 @@
+// $gradient: linear-gradient(to right top, #fc6767, #f857a6)
+// $gradientInverse: linear-gradient(to left bottom, #fc6767, #f857a6)
+// $blueText: #405069
+// $blueBg: #1d2744
+$xs: "(min-width: 319px)"
+$_xs: "(max-width: 350px)"
+$sm: "(min-width: 767px)"
+$_sm: "(max-width: 766px)"
+$md: "(min-width: 1025px)"
+$_md: "(max-width: 1024px)"
+$lg: "(min-width: 1224px)"
+$_lg: "(max-width: 1224px)"
+$_xlg: "(max-width: 1700px)"
+$xlg: "(min-width: 1700px)"
+html
+	font-size: 10px
+	// @media #{$_xlg}
+	// 	font-size: 8px
+	// @media #{$_lg}
+	// 	font-size: 8px
+	// @media #{$_md}
+	// 	font-size: 8px
+	// @media #{$_sm}
+	// 	font-size: 7.5px
+	// @media #{$_xs}
+	// 	font-size: 7px
+	// @media #{$xlg}
+	// 	font-size: 10px
+	body
+		min-width: 320px
+		font: 18px "Roboto", sans-serif
+		font-weight: normal
+		background-color: #f4f4f4
+		position: relative
+		margin: 0 auto
+		overflow-x: hidden
+		input,input:focus,select,select:focus,textarea
+			outline: none
+		a
+			color: inherit
+			outline: none
+			text-decoration: none
+		button
+			border: 0
+			outline: 0
+			cursor: pointer
+		section
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				width: 100%
+				left: 0
+				z-index: -5
+				background-repeat: no-repeat
+				background-position-x: center
+			&:after
+				display: table
+				clear: both
+				content: ""
+$cols: 12
+$col: calc( 100% / #{$cols} )
+=col($num)
+	@media #{$xs}
+		width: calc( #{$col} * #{$num} )
+=offset($offset)
+		margin-left: calc( #{$col} * #{$offset}
+.container
+	margin: 0 auto
+	position: relative
+	&:after
+		display: table
+		content: ""
+		clear: both
+	@media #{$xs}
+		width: 100%
+		padding: 0 15px
+	@media #{$sm}
+		width: 750px
+		padding: 0
+	@media #{$md}
+		width: 960px
+	@media #{$lg}
+		width: 1200px

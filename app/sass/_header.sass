@@ -1,0 +1,80 @@
+.header
+	height: 64px
+	background-color: #d9d9d9
+	padding: 0 80px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-weight: 300
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 2
+	&__menu
+		font-size: 30px
+		color: #000
+		text-transform: uppercase
+		letter-spacing: -.01em
+		position: relative
+		height: 100%
+		line-height: 64px
+		&__title
+			text-indent: 20px
+			cursor: pointer
+		&__dropdown
+			width: 450px
+			position: absolute
+			top: 64px
+			left: 0
+			background-color: rgba(197,197,197,.6)
+			font-size: 20px
+			padding-left: 2px
+			opacity: 0
+			transition: opacity .3s
+			&.active
+				opacity: 1
+			a
+				display: block
+				height: 52px
+				line-height: 52px
+				&:hover
+					text-decoration: underline
+				li
+					height: 100%
+	&__lang
+		height: 100%
+		font-size: 20px
+		text-transform: uppercase
+		a
+			display: inline-block
+			color: #bbbbbb
+			&.active
+				color: #000
+			&:first-child
+				border-right: 1px solid #000
+			li
+				display: inline-block
+				line-height: 64px
+				height: 100%
+				padding: 0 15px
+				cursor: pointer
+.main
+	letter-spacing: -.01em
+	margin-top: 64px
+	color: #000
+	text-align: center
+	&__wrapper
+
+		display: inline-block
+	img
+		max-width: 95%
+		margin: 20px 0 120px
+	p
+		font-size: 30px
+		text-align: left
+		padding-left: 45px
+		margin-bottom: 110px
+		span
+			font-size: 24px
+			display: block
